@@ -8,10 +8,10 @@ twitter_id_to_pvi = {}
 for (tid, pvi, party) in cur.fetchall():
     if party == 'D':
         if pvi < 2:
-            twitter_id_to_pvi[tid] = abs(pvi)
+            twitter_id_to_pvi[tid] = abs(2-pvi)
     else:
         if pvi > 2:
-            twitter_id_to_pvi[tid] = pvi
+            twitter_id_to_pvi[tid] = pvi-2
 
 cur.execute("SELECT user_id, type FROM tweets WHERE type != '?' AND type != 'f';")
 data = cur.fetchall()

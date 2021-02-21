@@ -15,5 +15,5 @@ for engagement in ["favorites", "retweets"]:
         r_sq = model.score(x, y)
         print(f'r^2 {engagement} {t}:', r_sq)
         plt.scatter(x, y)
-        plt.savefig(f"output/linear_regressions/types_engagement/{engagement}/2{t}.png")
+        plt.savefig(f"output/linear_regressions/types_engagement/{engagement}/{t}.png")
         plt.clf()
